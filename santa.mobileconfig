@@ -34,6 +34,10 @@
 			<array>
 				<string>platform</string>
 			</array>
+			<key>EntitlementsPrefixFilter</key>
+			<array>
+				<string>com.apple.private</string>
+			</array>
 			<key>FileAccessPolicy</key>
 			<dict>
 				<key>Version</key>

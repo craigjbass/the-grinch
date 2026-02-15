@@ -16,6 +16,7 @@ SantaConfig.generate("santa.mobileconfig", "AFA02DE3-ACA6-49C4-9980-A3664E22E446
     end
     telemetry ["Everything"]
     entitlements_team_id_filter ["platform"]
+    entitlements_prefix_filter ["com.apple.private"]
     event_log_type "syslog"
     payload_display_name "Santa Configuration"
     payload_identifier "uk.craigbass.santa.3C5E31F41-173D-4804-8F94-0B87FA6FB73E"

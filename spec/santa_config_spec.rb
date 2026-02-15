@@ -616,4 +616,19 @@ RSpec.describe SantaConfig do
       expect(xml).to include("<string>platform</string>")
     end
   end
+
+  describe "entitlements_prefix_filter" do
+    it "includes EntitlementsPrefixFilter in payload" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+          entitlements_prefix_filter ["com.apple.private"]
+        end
+      end
+
+      expect(xml).to include("<key>EntitlementsPrefixFilter</key>")
+      expect(xml).to include("<string>com.apple.private</string>")
+    end
+  end
 end
