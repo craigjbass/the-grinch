@@ -8,7 +8,7 @@ watch_item "SSHKeys" do
     block_message "SSH keys are protected from unauthorized access"
   end
 
-  process signing_id: "com.apple.openssh", platform_binary: true
+  process signing_id: "com.apple.ssh", platform_binary: true
   process signing_id: "com.apple.Terminal", platform_binary: true
   process signing_id: "com.apple.dt.Xcode", team_id: "59GAB85EFG"
   process signing_id: "dev.warp.Warp-Stable", team_id: "QKE527SSM6"

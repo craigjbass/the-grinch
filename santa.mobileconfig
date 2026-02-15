@@ -1301,7 +1301,7 @@
 						<array>
 							<dict>
 								<key>SigningID</key>
-								<string>com.apple.openssh</string>
+								<string>com.apple.ssh</string>
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
