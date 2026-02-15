@@ -11,6 +11,18 @@
 			<false/>
 			<key>StaticRules</key>
 			<array>
+				<dict>
+					<key>identifier</key>
+					<string>platform:com.apple.spctl</string>
+					<key>rule_type</key>
+					<string>SIGNINGID</string>
+					<key>policy</key>
+					<string>CEL</string>
+					<key>cel_expr</key>
+					<string>'--master-disable' in args || '--global-disable' in args || '--disable' in args ? BLOCKLIST : ALLOWLIST</string>
+					<key>custom_msg</key>
+					<string>Modifying Gatekeeper settings is not allowed</string>
+				</dict>
 			</array>
 			<key>Telemetry</key>
 			<array>
