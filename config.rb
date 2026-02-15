@@ -36,6 +36,7 @@ SantaConfig.generate("santa.mobileconfig", "AFA02DE3-ACA6-49C4-9980-A3664E22E446
       load "file_access_policy/pam.rb"
       load "file_access_policy/password_hashes.rb"
       load "file_access_policy/launch_items.rb"
+      load "file_access_policy/scheduled_tasks.rb"
     end
   end
 end
