@@ -42,6 +42,7 @@ watch_item "OfficeSharedData" do
   process signing_id: "com.microsoft.onenote.mac", team_id: "UBF8T346G9"
   process signing_id: "com.microsoft.OneDrive", team_id: "UBF8T346G9"
   process signing_id: "com.microsoft.teams2", team_id: "UBF8T346G9"
+  process signing_id: "com.apple.mds", platform_binary: true
 end
 
 watch_item "TeamsData" do

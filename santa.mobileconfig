@@ -2350,6 +2350,12 @@
 								<key>TeamID</key>
 								<string>UBF8T346G9</string>
 							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mds</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
 						</array>
 					</dict>
 					<key>TeamsData</key>
