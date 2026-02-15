@@ -43,6 +43,8 @@
 			<array>
 				<string>com.apple.private</string>
 			</array>
+			<key>IgnoreOtherEndpointSecurityClients</key>
+			<true/>
 			<key>FileAccessPolicy</key>
 			<dict>
 				<key>Version</key>

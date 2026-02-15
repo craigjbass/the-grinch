@@ -63,6 +63,7 @@ module SantaConfig
     def event_log_type(val) = @data[:event_log_type] = val
     def entitlements_team_id_filter(val) = @data[:entitlements_team_id_filter] = val
     def entitlements_prefix_filter(val) = @data[:entitlements_prefix_filter] = val
+    def ignore_other_endpoint_security_clients(val) = @data[:ignore_other_endpoint_security_clients] = val
     def payload_display_name(val) = @data[:payload_display_name] = val
     def payload_identifier(val) = @data[:payload_identifier] = val
     def payload_type(val) = @data[:payload_type] = val
@@ -86,6 +87,7 @@ module SantaConfig
       result["EventLogType"] = @data[:event_log_type] if @data.key?(:event_log_type)
       result["EntitlementsTeamIDFilter"] = @data[:entitlements_team_id_filter] if @data.key?(:entitlements_team_id_filter)
       result["EntitlementsPrefixFilter"] = @data[:entitlements_prefix_filter] if @data.key?(:entitlements_prefix_filter)
+      result["IgnoreOtherEndpointSecurityClients"] = @data[:ignore_other_endpoint_security_clients] if @data.key?(:ignore_other_endpoint_security_clients)
       result["FileAccessPolicy"] = @file_access_policy.to_plist if @file_access_policy
       result["PayloadUUID"] = @uuid
       result["PayloadDisplayName"] = @data[:payload_display_name]
