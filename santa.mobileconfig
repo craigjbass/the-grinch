@@ -26,7 +26,12 @@
 			</array>
 			<key>Telemetry</key>
 			<array>
-				<string>Everything</string>
+				<string>FileAccess</string>
+				<string>Execution</string>
+				<string>Allowlist</string>
+				<string>GatekeeperOverride</string>
+				<string>TCCModification</string>
+				<string>XProtect</string>
 			</array>
 			<key>EventLogType</key>
 			<string>syslog</string>

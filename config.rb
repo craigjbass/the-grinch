@@ -14,7 +14,7 @@ SantaConfig.generate("santa.mobileconfig", "AFA02DE3-ACA6-49C4-9980-A3664E22E446
     static_rules do
       load "static_rules/gatekeeper.rb"
     end
-    telemetry ["Everything"]
+    telemetry ["FileAccess", "Execution", "Allowlist", "GatekeeperOverride", "TCCModification", "XProtect"]
     entitlements_team_id_filter ["platform"]
     entitlements_prefix_filter ["com.apple.private"]
     event_log_type "syslog"
