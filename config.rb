@@ -45,6 +45,7 @@ SantaConfig.generate("santa.mobileconfig", "AFA02DE3-ACA6-49C4-9980-A3664E22E446
       load "file_access_policy/audio_plugins.rb"
       load "file_access_policy/in_memory_loading.rb"
       load "file_access_policy/electron_apps.rb"
+      load "file_access_policy/microsoft365.rb"
     end
   end
 end
