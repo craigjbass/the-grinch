@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "ScheduledTasks" do
   path "/private/var/at/", prefix: true
   path "/usr/lib/cron/", prefix: true

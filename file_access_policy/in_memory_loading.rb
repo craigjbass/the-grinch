@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "InMemoryCodeLoading" do
   path "/private/tmp/NSCreateObjectFileImageFromMemory-", prefix: true
   path "/tmp/NSCreateObjectFileImageFromMemory-", prefix: true

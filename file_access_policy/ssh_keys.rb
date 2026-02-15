@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "SSHKeys" do
   path "/Users/*/.ssh/", prefix: true
 

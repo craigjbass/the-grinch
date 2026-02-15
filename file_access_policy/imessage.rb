@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "iMessages" do
   path "/Users/*/Library/Messages/", prefix: true
 

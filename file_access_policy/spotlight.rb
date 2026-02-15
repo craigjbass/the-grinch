@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "SpotlightImporters" do
   path "/Library/Spotlight/", prefix: true
 

@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "PAMConfiguration" do
   path "/etc/pam.d/", prefix: true
 

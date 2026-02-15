@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "PasswordHashes" do
   path "/var/db/dslocal/nodes/Default/users/", prefix: true
 

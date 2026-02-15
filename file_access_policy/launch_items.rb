@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "LaunchAgents" do
   path "/Library/LaunchAgents/", prefix: true
   path "/Users/*/Library/LaunchAgents/", prefix: true

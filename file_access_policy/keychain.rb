@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "UserKeychains" do
   path "/Users/*/Library/Keychains/", prefix: true
 
