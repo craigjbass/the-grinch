@@ -30,6 +30,7 @@ watch_item "SafariLocalStorage" do
   process signing_id: "com.apple.SafariServices", platform_binary: true
   process signing_id: "com.apple.WebKit.WebContent", platform_binary: true
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
+  process signing_id: "com.apple.WebKit.Networking", platform_binary: true
 end
 
 watch_item "SafariIndexedDB" do
@@ -61,7 +62,9 @@ watch_item "SafariWebData" do
   end
 
   process signing_id: "com.apple.Safari", platform_binary: true
+  process signing_id: "com.apple.finder", platform_binary: true
   process signing_id: "com.apple.SafariServices", platform_binary: true
   process signing_id: "com.apple.WebKit.WebContent", platform_binary: true
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
+  process signing_id: "com.apple.WebKit.Networking", platform_binary: true
 end

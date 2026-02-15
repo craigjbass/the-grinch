@@ -50,6 +50,12 @@
 						<array>
 							<dict>
 								<key>SigningID</key>
+								<string>com.google.Chrome</string>
+								<key>TeamID</key>
+								<string>EQHXZ8M8AV</string>
+							</dict>
+							<dict>
+								<key>SigningID</key>
 								<string>com.google.Chrome.helper</string>
 								<key>TeamID</key>
 								<string>EQHXZ8M8AV</string>
@@ -88,6 +94,12 @@
 						<array>
 							<dict>
 								<key>SigningID</key>
+								<string>com.google.Chrome</string>
+								<key>TeamID</key>
+								<string>EQHXZ8M8AV</string>
+							</dict>
+							<dict>
+								<key>SigningID</key>
 								<string>com.google.Chrome.helper</string>
 								<key>TeamID</key>
 								<string>EQHXZ8M8AV</string>
@@ -124,6 +136,12 @@
 						</dict>
 						<key>Processes</key>
 						<array>
+							<dict>
+								<key>SigningID</key>
+								<string>com.google.Chrome</string>
+								<key>TeamID</key>
+								<string>EQHXZ8M8AV</string>
+							</dict>
 							<dict>
 								<key>SigningID</key>
 								<string>com.google.Chrome.helper</string>
@@ -170,6 +188,12 @@
 						<array>
 							<dict>
 								<key>SigningID</key>
+								<string>com.google.Chrome</string>
+								<key>TeamID</key>
+								<string>EQHXZ8M8AV</string>
+							</dict>
+							<dict>
+								<key>SigningID</key>
 								<string>com.google.Chrome.helper</string>
 								<key>TeamID</key>
 								<string>EQHXZ8M8AV</string>
@@ -206,6 +230,12 @@
 						</dict>
 						<key>Processes</key>
 						<array>
+							<dict>
+								<key>SigningID</key>
+								<string>com.google.Chrome</string>
+								<key>TeamID</key>
+								<string>EQHXZ8M8AV</string>
+							</dict>
 							<dict>
 								<key>SigningID</key>
 								<string>com.google.Chrome.helper</string>
@@ -330,6 +360,12 @@
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.WebKit.Networking</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
 						</array>
 					</dict>
 					<key>SafariIndexedDB</key>
@@ -426,6 +462,12 @@
 							</dict>
 							<dict>
 								<key>SigningID</key>
+								<string>com.apple.finder</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
 								<string>com.apple.SafariServices</string>
 								<key>PlatformBinary</key>
 								<true/>
@@ -439,6 +481,12 @@
 							<dict>
 								<key>SigningID</key>
 								<string>com.apple.mdworker_shared</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.WebKit.Networking</string>
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>

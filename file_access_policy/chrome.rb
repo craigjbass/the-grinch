@@ -8,6 +8,7 @@ watch_item "ChromeCookies" do
     block_message "This file is configured to only be accessed by executable binaries signed by the Chrome TeamID EQHXZ8M8AV"
   end
 
+  process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
 end
@@ -22,6 +23,7 @@ watch_item "ChromeLocalStorage" do
     block_message "This file is configured to only be accessed by executable binaries signed by the Chrome TeamID EQHXZ8M8AV"
   end
 
+  process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
 end
@@ -36,6 +38,7 @@ watch_item "ChromeIndexedDB" do
     block_message "This file is configured to only be accessed by executable binaries signed by the Chrome TeamID EQHXZ8M8AV"
   end
 
+  process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
 end
@@ -51,6 +54,7 @@ watch_item "ChromeWebData" do
     block_message "This file is configured to only be accessed by executable binaries signed by the Chrome TeamID EQHXZ8M8AV"
   end
 
+  process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
 end
@@ -65,6 +69,7 @@ watch_item "ChromeSessionStorage" do
     block_message "This file is configured to only be accessed by executable binaries signed by the Chrome TeamID EQHXZ8M8AV"
   end
 
+  process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
 end
