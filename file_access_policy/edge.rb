@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "EdgeCookies" do
   path "/Users/*/Library/Application Support/Microsoft Edge/*/Cookies", prefix: true
 

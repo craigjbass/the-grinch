@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "FirefoxCookies" do
   path "/Users/*/Library/Application Support/Firefox/Profiles/*/cookies.sqlite", prefix: true
 

@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "ArcCookies" do
   path "/Users/*/Library/Application Support/Arc/User Data/*/Cookies", prefix: true
 

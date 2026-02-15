@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "BraveCookies" do
   path "/Users/*/Library/Application Support/BraveSoftware/Brave-Browser/*/Cookies", prefix: true
 
