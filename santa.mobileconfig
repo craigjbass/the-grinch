@@ -40,7 +40,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -78,7 +78,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -116,7 +116,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -160,7 +160,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -198,7 +198,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -242,7 +242,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -298,7 +298,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -354,7 +354,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -410,7 +410,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -460,7 +460,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -504,7 +504,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -542,7 +542,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -580,7 +580,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -618,7 +618,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -656,7 +656,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -700,7 +700,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -738,7 +738,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -776,7 +776,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -814,7 +814,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -852,7 +852,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -896,7 +896,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -934,7 +934,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -972,7 +972,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -1010,7 +1010,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -1048,7 +1048,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -1092,7 +1092,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -1130,7 +1130,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<true/>
+							<false/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
