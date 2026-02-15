@@ -46,11 +46,19 @@ module SantaConfig
       @uuid = uuid
       @data = {}
       @file_access_policy = nil
+      @static_rules = nil
     end
 
     def client_mode(val) = @data[:client_mode] = val
     def enable_silent_mode(val) = @data[:enable_silent_mode] = val
-    def static_rules(val) = @data[:static_rules] = val
+    def static_rules(val = nil, &block)
+      if block
+        @static_rules = StaticRules.new
+        @static_rules.instance_eval(&block)
+      else
+        @data[:static_rules] = val
+      end
+    end
     def telemetry(val) = @data[:telemetry] = val
     def event_log_type(val) = @data[:event_log_type] = val
     def payload_display_name(val) = @data[:payload_display_name] = val
@@ -67,7 +75,11 @@ module SantaConfig
       result = {}
       result["ClientMode"] = @data[:client_mode] if @data.key?(:client_mode)
       result["EnableSilentMode"] = @data[:enable_silent_mode] if @data.key?(:enable_silent_mode)
-      result["StaticRules"] = @data[:static_rules] if @data.key?(:static_rules)
+      if @static_rules
+        result["StaticRules"] = @static_rules.to_plist
+      elsif @data.key?(:static_rules)
+        result["StaticRules"] = @data[:static_rules]
+      end
       result["Telemetry"] = @data[:telemetry] if @data.key?(:telemetry)
       result["EventLogType"] = @data[:event_log_type] if @data.key?(:event_log_type)
       result["FileAccessPolicy"] = @file_access_policy.to_plist if @file_access_policy
@@ -161,6 +173,44 @@ module SantaConfig
     def event_detail_text(val) = @data["EventDetailText"] = val
     def enable_silent_mode(val) = @data["EnableSilentMode"] = val
     def enable_silent_tty_mode(val) = @data["EnableSilentTTYMode"] = val
+
+    def to_plist
+      @data
+    end
+  end
+
+  class StaticRules
+    def initialize
+      @rules = []
+    end
+
+    def load(path)
+      instance_eval(File.read(path), path)
+    end
+
+    def rule(&block)
+      r = StaticRule.new
+      r.instance_eval(&block)
+      @rules << r
+    end
+
+    def to_plist
+      @rules.map(&:to_plist)
+    end
+  end
+
+  class StaticRule
+    def initialize
+      @data = {}
+    end
+
+    def identifier(val) = @data["identifier"] = val
+    def rule_type(val) = @data["rule_type"] = val
+    def policy(val) = @data["policy"] = val
+    def cel_expr(val) = @data["cel_expr"] = val
+    def custom_msg(val) = @data["custom_msg"] = val
+    def custom_url(val) = @data["custom_url"] = val
+    def comment(val) = @data["comment"] = val
 
     def to_plist
       @data

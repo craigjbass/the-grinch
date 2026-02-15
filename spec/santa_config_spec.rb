@@ -380,4 +380,225 @@ RSpec.describe SantaConfig do
       expect(xml).to include("<true/>")
     end
   end
+
+  describe "static_rules with block DSL" do
+    it "generates a rule with identifier, rule_type, and policy" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          static_rules do
+            rule do
+              identifier "EQHXZ8M8AV:com.google.Chrome"
+              rule_type "SIGNINGID"
+              policy "ALLOWLIST"
+            end
+          end
+        end
+      end
+
+      expect(xml).to include("<key>StaticRules</key>")
+      expect(xml).to include("<key>identifier</key>")
+      expect(xml).to include("<string>EQHXZ8M8AV:com.google.Chrome</string>")
+      expect(xml).to include("<key>rule_type</key>")
+      expect(xml).to include("<string>SIGNINGID</string>")
+      expect(xml).to include("<key>policy</key>")
+      expect(xml).to include("<string>ALLOWLIST</string>")
+    end
+
+    it "generates a CEL rule with cel_expr" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          static_rules do
+            rule do
+              identifier "EQHXZ8M8AV:com.google.Chrome"
+              rule_type "SIGNINGID"
+              policy "CEL"
+              cel_expr "target.signing_time >= timestamp('2025-01-01T00:00:00Z')"
+            end
+          end
+        end
+      end
+
+      expect(xml).to include("<key>policy</key>")
+      expect(xml).to include("<string>CEL</string>")
+      expect(xml).to include("<key>cel_expr</key>")
+      expect(xml).to include("<string>target.signing_time &gt;= timestamp('2025-01-01T00:00:00Z')</string>")
+    end
+
+    it "supports custom_msg and custom_url" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          static_rules do
+            rule do
+              identifier "EQHXZ8M8AV:com.google.Chrome"
+              rule_type "SIGNINGID"
+              policy "BLOCKLIST"
+              custom_msg "This application is blocked"
+              custom_url "https://example.com/help"
+            end
+          end
+        end
+      end
+
+      expect(xml).to include("<key>custom_msg</key>")
+      expect(xml).to include("<string>This application is blocked</string>")
+      expect(xml).to include("<key>custom_url</key>")
+      expect(xml).to include("<string>https://example.com/help</string>")
+    end
+
+    it "supports comment field" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          static_rules do
+            rule do
+              identifier "platform:com.apple.curl"
+              rule_type "SIGNINGID"
+              policy "ALLOWLIST"
+              comment "Allow curl"
+            end
+          end
+        end
+      end
+
+      expect(xml).to include("<key>comment</key>")
+      expect(xml).to include("<string>Allow curl</string>")
+    end
+
+    it "generates multiple rules" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          static_rules do
+            rule do
+              identifier "EQHXZ8M8AV:com.google.Chrome"
+              rule_type "SIGNINGID"
+              policy "ALLOWLIST"
+            end
+
+            rule do
+              identifier "43AQ936H96:org.mozilla.firefox"
+              rule_type "SIGNINGID"
+              policy "BLOCKLIST"
+            end
+          end
+        end
+      end
+
+      expect(xml).to include("<string>EQHXZ8M8AV:com.google.Chrome</string>")
+      expect(xml).to include("<string>43AQ936H96:org.mozilla.firefox</string>")
+    end
+
+    it "loads rules from an external file" do
+      tmpfile = "tmp_test_static_rules.rb"
+      File.write(tmpfile, <<~RUBY)
+        rule do
+          identifier "EQHXZ8M8AV:com.google.Chrome"
+          rule_type "SIGNINGID"
+          policy "CEL"
+          cel_expr "target.signing_time >= timestamp('2025-06-01T00:00:00Z')"
+          custom_msg "Chrome is too old"
+        end
+      RUBY
+
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          static_rules do
+            load tmpfile
+          end
+        end
+      end
+
+      File.delete(tmpfile)
+
+      expect(xml).to include("<key>StaticRules</key>")
+      expect(xml).to include("<string>EQHXZ8M8AV:com.google.Chrome</string>")
+      expect(xml).to include("<string>Chrome is too old</string>")
+    end
+
+    it "still supports raw array for backward compatibility" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+          static_rules []
+        end
+      end
+
+      expect(xml).to include("<key>StaticRules</key>")
+      expect(xml).to include("<array>")
+    end
+
+    it "supports all rule types" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          static_rules do
+            rule do
+              identifier "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"
+              rule_type "BINARY"
+              policy "BLOCKLIST"
+            end
+
+            rule do
+              identifier "EQHXZ8M8AV"
+              rule_type "TEAMID"
+              policy "ALLOWLIST"
+            end
+
+            rule do
+              identifier "ea7c2330699c760b2d6c2c3e703fde01ca54e9b4"
+              rule_type "CDHASH"
+              policy "SILENT_BLOCKLIST"
+            end
+          end
+        end
+      end
+
+      expect(xml).to include("<string>BINARY</string>")
+      expect(xml).to include("<string>TEAMID</string>")
+      expect(xml).to include("<string>CDHASH</string>")
+      expect(xml).to include("<string>SILENT_BLOCKLIST</string>")
+    end
+
+    it "supports CEL expressions inspecting args" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          static_rules do
+            rule do
+              identifier "platform:com.apple.spctl"
+              rule_type "SIGNINGID"
+              policy "CEL"
+              cel_expr "'--master-disable' in args ? BLOCKLIST : ALLOWLIST"
+              custom_msg "Disabling Gatekeeper is not allowed"
+            end
+          end
+        end
+      end
+
+      expect(xml).to include("<key>cel_expr</key>")
+      expect(xml).to include("'--master-disable' in args ? BLOCKLIST : ALLOWLIST")
+      expect(xml).to include("<string>Disabling Gatekeeper is not allowed</string>")
+    end
+  end
 end
