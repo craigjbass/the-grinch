@@ -1,3 +1,5 @@
+# Vibe coded untested config
+
 watch_item "OneDriveSync" do
   path "/Users/*/Library/CloudStorage/OneDrive-*/", prefix: true
 
