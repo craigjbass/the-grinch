@@ -1265,6 +1265,12 @@
 							</dict>
 							<dict>
 								<key>SigningID</key>
+								<string>com.apple.imtransferservices.IMTransferAgent</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
 								<string>com.apple.mdworker_shared</string>
 								<key>PlatformBinary</key>
 								<true/>

@@ -12,6 +12,7 @@ watch_item "iMessages" do
 
   process signing_id: "com.apple.MobileSMS", platform_binary: true
   process signing_id: "com.apple.iChat", platform_binary: true
+  process signing_id: "com.apple.imtransferservices.IMTransferAgent", platform_binary: true
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
   process signing_id: "com.apple.Spotlight", platform_binary: true
 end
