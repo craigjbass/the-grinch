@@ -26,10 +26,14 @@
 			</array>
 			<key>Telemetry</key>
 			<array>
-				<string>FileAccess</string>
+				<string>Everything</string>
 			</array>
 			<key>EventLogType</key>
 			<string>syslog</string>
+			<key>EntitlementsTeamIDFilter</key>
+			<array>
+				<string>platform</string>
+			</array>
 			<key>FileAccessPolicy</key>
 			<dict>
 				<key>Version</key>

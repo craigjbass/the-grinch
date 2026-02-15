@@ -14,7 +14,8 @@ SantaConfig.generate("santa.mobileconfig", "AFA02DE3-ACA6-49C4-9980-A3664E22E446
     static_rules do
       load "static_rules/gatekeeper.rb"
     end
-    telemetry ["FileAccess"]
+    telemetry ["Everything"]
+    entitlements_team_id_filter ["platform"]
     event_log_type "syslog"
     payload_display_name "Santa Configuration"
     payload_identifier "uk.craigbass.santa.3C5E31F41-173D-4804-8F94-0B87FA6FB73E"

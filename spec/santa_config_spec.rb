@@ -601,4 +601,19 @@ RSpec.describe SantaConfig do
       expect(xml).to include("<string>Disabling Gatekeeper is not allowed</string>")
     end
   end
+
+  describe "entitlements_team_id_filter" do
+    it "includes EntitlementsTeamIDFilter in payload" do
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+          entitlements_team_id_filter ["platform"]
+        end
+      end
+
+      expect(xml).to include("<key>EntitlementsTeamIDFilter</key>")
+      expect(xml).to include("<string>platform</string>")
+    end
+  end
 end
