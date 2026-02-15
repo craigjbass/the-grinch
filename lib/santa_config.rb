@@ -92,6 +92,10 @@ module SantaConfig
     def event_detail_url(val) = @event_detail_url = val
     def event_detail_text(val) = @event_detail_text = val
 
+    def load(path)
+      instance_eval(File.read(path), path)
+    end
+
     def watch_item(name, &block)
       item = WatchItem.new
       item.instance_eval(&block)

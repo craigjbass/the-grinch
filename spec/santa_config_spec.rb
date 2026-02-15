@@ -137,6 +137,41 @@ RSpec.describe SantaConfig do
     end
   end
 
+  describe "file access policy: load" do
+    it "loads watch items from an external file" do
+      tmpfile = "tmp_test_watch_items.rb"
+      File.write(tmpfile, <<~RUBY)
+        watch_item "LoadedRule" do
+          path "/tmp/loaded", prefix: true
+          options do
+            rule_type "PathsWithAllowedProcesses"
+            allow_read_access false
+          end
+          process signing_id: "com.test.loaded", team_id: "ABCDEF"
+        end
+      RUBY
+
+      xml = generate do
+        payload "P-UUID" do
+          payload_type "com.northpolesec.santa"
+          payload_version 1
+
+          file_access_policy do
+            version "v1.0"
+            load tmpfile
+          end
+        end
+      end
+
+      File.delete(tmpfile)
+
+      expect(xml).to include("<key>LoadedRule</key>")
+      expect(xml).to include("<string>/tmp/loaded</string>")
+      expect(xml).to include("<string>com.test.loaded</string>")
+      expect(xml).to include("<string>ABCDEF</string>")
+    end
+  end
+
   # --- NEW FIELDS: Red phase starts here ---
 
   describe "file access policy: event_detail_url" do
