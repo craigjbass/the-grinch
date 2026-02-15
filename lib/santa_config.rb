@@ -83,10 +83,14 @@ module SantaConfig
   class FileAccessPolicy
     def initialize
       @version = nil
+      @event_detail_url = nil
+      @event_detail_text = nil
       @watch_items = {}
     end
 
     def version(val) = @version = val
+    def event_detail_url(val) = @event_detail_url = val
+    def event_detail_text(val) = @event_detail_text = val
 
     def watch_item(name, &block)
       item = WatchItem.new
@@ -95,10 +99,12 @@ module SantaConfig
     end
 
     def to_plist
-      {
-        "Version" => @version,
-        "WatchItems" => @watch_items.transform_values(&:to_plist),
-      }
+      result = {}
+      result["Version"] = @version
+      result["EventDetailURL"] = @event_detail_url if @event_detail_url
+      result["EventDetailText"] = @event_detail_text if @event_detail_text
+      result["WatchItems"] = @watch_items.transform_values(&:to_plist) unless @watch_items.empty?
+      result
     end
   end
 
@@ -123,6 +129,9 @@ module SantaConfig
       p["SigningID"] = kwargs[:signing_id] if kwargs[:signing_id]
       p["TeamID"] = kwargs[:team_id] if kwargs[:team_id]
       p["PlatformBinary"] = kwargs[:platform_binary] if kwargs.key?(:platform_binary)
+      p["CDHash"] = kwargs[:cd_hash] if kwargs[:cd_hash]
+      p["CertificateSha256"] = kwargs[:certificate_sha256] if kwargs[:certificate_sha256]
+      p["BinaryPath"] = kwargs[:binary_path] if kwargs[:binary_path]
       @processes << p
     end
 
@@ -144,6 +153,10 @@ module SantaConfig
     def audit_only(val) = @data["AuditOnly"] = val
     def rule_type(val) = @data["RuleType"] = val
     def block_message(val) = @data["BlockMessage"] = val
+    def event_detail_url(val) = @data["EventDetailURL"] = val
+    def event_detail_text(val) = @data["EventDetailText"] = val
+    def enable_silent_mode(val) = @data["EnableSilentMode"] = val
+    def enable_silent_tty_mode(val) = @data["EnableSilentTTYMode"] = val
 
     def to_plist
       @data
