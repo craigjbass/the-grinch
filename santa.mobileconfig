@@ -40,7 +40,7 @@
 							<key>AllowReadAccess</key>
 							<false/>
 							<key>AuditOnly</key>
-							<false/>
+							<true/>
 							<key>RuleType</key>
 							<string>PathsWithAllowedProcesses</string>
 							<key>BlockMessage</key>
@@ -53,6 +53,214 @@
 								<string>com.google.Chrome.helper</string>
 								<key>TeamID</key>
 								<string>EQHXZ8M8AV</string>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdworker_shared</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+						</array>
+					</dict>
+					<key>SafariCookies</key>
+					<dict>
+						<key>Paths</key>
+						<array>
+							<dict>
+								<key>Path</key>
+								<string>/Users/*/Library/Cookies/Cookies.binarycookies</string>
+								<key>IsPrefix</key>
+								<false/>
+							</dict>
+							<dict>
+								<key>Path</key>
+								<string>/Users/*/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies</string>
+								<key>IsPrefix</key>
+								<false/>
+							</dict>
+						</array>
+						<key>Options</key>
+						<dict>
+							<key>AllowReadAccess</key>
+							<false/>
+							<key>AuditOnly</key>
+							<true/>
+							<key>RuleType</key>
+							<string>PathsWithAllowedProcesses</string>
+							<key>BlockMessage</key>
+							<string>This file is configured to only be accessed by Safari</string>
+						</dict>
+						<key>Processes</key>
+						<array>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.Safari</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.SafariServices</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.WebKit.Networking</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdworker_shared</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+						</array>
+					</dict>
+					<key>FirefoxCookies</key>
+					<dict>
+						<key>Paths</key>
+						<array>
+							<dict>
+								<key>Path</key>
+								<string>/Users/*/Library/Application Support/Firefox/Profiles/*/cookies.sqlite</string>
+								<key>IsPrefix</key>
+								<true/>
+							</dict>
+						</array>
+						<key>Options</key>
+						<dict>
+							<key>AllowReadAccess</key>
+							<false/>
+							<key>AuditOnly</key>
+							<true/>
+							<key>RuleType</key>
+							<string>PathsWithAllowedProcesses</string>
+							<key>BlockMessage</key>
+							<string>This file is configured to only be accessed by executable binaries signed by the Firefox TeamID 43AQ936H96</string>
+						</dict>
+						<key>Processes</key>
+						<array>
+							<dict>
+								<key>SigningID</key>
+								<string>org.mozilla.firefox</string>
+								<key>TeamID</key>
+								<string>43AQ936H96</string>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdworker_shared</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+						</array>
+					</dict>
+					<key>EdgeCookies</key>
+					<dict>
+						<key>Paths</key>
+						<array>
+							<dict>
+								<key>Path</key>
+								<string>/Users/*/Library/Application Support/Microsoft Edge/*/Cookies</string>
+								<key>IsPrefix</key>
+								<true/>
+							</dict>
+						</array>
+						<key>Options</key>
+						<dict>
+							<key>AllowReadAccess</key>
+							<false/>
+							<key>AuditOnly</key>
+							<true/>
+							<key>RuleType</key>
+							<string>PathsWithAllowedProcesses</string>
+							<key>BlockMessage</key>
+							<string>This file is configured to only be accessed by executable binaries signed by the Edge TeamID UBF8T346G9</string>
+						</dict>
+						<key>Processes</key>
+						<array>
+							<dict>
+								<key>SigningID</key>
+								<string>com.microsoft.Edge.helper</string>
+								<key>TeamID</key>
+								<string>UBF8T346G9</string>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdworker_shared</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+						</array>
+					</dict>
+					<key>BraveCookies</key>
+					<dict>
+						<key>Paths</key>
+						<array>
+							<dict>
+								<key>Path</key>
+								<string>/Users/*/Library/Application Support/BraveSoftware/Brave-Browser/*/Cookies</string>
+								<key>IsPrefix</key>
+								<true/>
+							</dict>
+						</array>
+						<key>Options</key>
+						<dict>
+							<key>AllowReadAccess</key>
+							<false/>
+							<key>AuditOnly</key>
+							<true/>
+							<key>RuleType</key>
+							<string>PathsWithAllowedProcesses</string>
+							<key>BlockMessage</key>
+							<string>This file is configured to only be accessed by executable binaries signed by the Brave TeamID KL8N8XSYF4</string>
+						</dict>
+						<key>Processes</key>
+						<array>
+							<dict>
+								<key>SigningID</key>
+								<string>com.brave.Browser.helper</string>
+								<key>TeamID</key>
+								<string>KL8N8XSYF4</string>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdworker_shared</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+						</array>
+					</dict>
+					<key>ArcCookies</key>
+					<dict>
+						<key>Paths</key>
+						<array>
+							<dict>
+								<key>Path</key>
+								<string>/Users/*/Library/Application Support/Arc/User Data/*/Cookies</string>
+								<key>IsPrefix</key>
+								<true/>
+							</dict>
+						</array>
+						<key>Options</key>
+						<dict>
+							<key>AllowReadAccess</key>
+							<false/>
+							<key>AuditOnly</key>
+							<true/>
+							<key>RuleType</key>
+							<string>PathsWithAllowedProcesses</string>
+							<key>BlockMessage</key>
+							<string>This file is configured to only be accessed by executable binaries signed by the Arc TeamID S6N382Y83G</string>
+						</dict>
+						<key>Processes</key>
+						<array>
+							<dict>
+								<key>SigningID</key>
+								<string>company.thebrowser.Browser.helper</string>
+								<key>TeamID</key>
+								<string>S6N382Y83G</string>
 							</dict>
 							<dict>
 								<key>SigningID</key>
