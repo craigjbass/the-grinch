@@ -24,4 +24,6 @@ watch_item "CoreSpotlightIndex" do
 
   process signing_id: "com.apple.Spotlight", platform_binary: true
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
+  process signing_id: "com.apple.spotlightknowledged", platform_binary: true
+  process signing_id: "com.apple.corespotlightd", platform_binary: true
 end
