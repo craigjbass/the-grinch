@@ -31,6 +31,7 @@ SantaConfig.generate("santa.mobileconfig", "AFA02DE3-ACA6-49C4-9980-A3664E22E446
       load "file_access_policy/edge.rb"
       load "file_access_policy/brave.rb"
       load "file_access_policy/arc.rb"
+      load "file_access_policy/imessage.rb"
     end
   end
 end
