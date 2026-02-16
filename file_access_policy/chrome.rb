@@ -11,6 +11,7 @@ watch_item "ChromeCookies" do
   process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
+  process signing_id: "com.apple.mdsync", platform_binary: true
 end
 
 watch_item "ChromeLocalStorage" do
@@ -26,6 +27,7 @@ watch_item "ChromeLocalStorage" do
   process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
+  process signing_id: "com.apple.mdsync", platform_binary: true
 end
 
 watch_item "ChromeIndexedDB" do
@@ -41,6 +43,7 @@ watch_item "ChromeIndexedDB" do
   process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
+  process signing_id: "com.apple.mdsync", platform_binary: true
 end
 
 watch_item "ChromeWebData" do
@@ -57,6 +60,7 @@ watch_item "ChromeWebData" do
   process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
+  process signing_id: "com.apple.mdsync", platform_binary: true
 end
 
 watch_item "ChromeSessionStorage" do
@@ -72,4 +76,5 @@ watch_item "ChromeSessionStorage" do
   process signing_id: "com.google.Chrome", team_id: "EQHXZ8M8AV"
   process signing_id: "com.google.Chrome.helper", team_id: "EQHXZ8M8AV"
   process signing_id: "com.apple.mdworker_shared", platform_binary: true
+  process signing_id: "com.apple.mdsync", platform_binary: true
 end

@@ -93,6 +93,12 @@
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdsync</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
 						</array>
 					</dict>
 					<key>ChromeLocalStorage</key>
@@ -137,6 +143,12 @@
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdsync</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
 						</array>
 					</dict>
 					<key>ChromeIndexedDB</key>
@@ -178,6 +190,12 @@
 							<dict>
 								<key>SigningID</key>
 								<string>com.apple.mdworker_shared</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdsync</string>
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
@@ -231,6 +249,12 @@
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdsync</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
 						</array>
 					</dict>
 					<key>ChromeSessionStorage</key>
@@ -272,6 +296,12 @@
 							<dict>
 								<key>SigningID</key>
 								<string>com.apple.mdworker_shared</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdsync</string>
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
@@ -2365,6 +2395,18 @@
 							<dict>
 								<key>SigningID</key>
 								<string>com.apple.mds</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdsync</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.mdworker_shared</string>
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
