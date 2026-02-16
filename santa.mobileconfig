@@ -1281,6 +1281,18 @@
 								<key>PlatformBinary</key>
 								<true/>
 							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.imdpersistence.IMDPersistenceAgent</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
+								<string>com.apple.imagent</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
 						</array>
 					</dict>
 					<key>SSHKeys</key>
