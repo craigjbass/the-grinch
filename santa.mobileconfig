@@ -1357,6 +1357,12 @@
 							</dict>
 							<dict>
 								<key>SigningID</key>
+								<string>com.apple.ssh-agent</string>
+								<key>PlatformBinary</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>SigningID</key>
 								<string>com.apple.Terminal</string>
 								<key>PlatformBinary</key>
 								<true/>

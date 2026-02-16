@@ -11,6 +11,7 @@ watch_item "SSHKeys" do
   end
 
   process signing_id: "com.apple.ssh", platform_binary: true
+  process signing_id: "com.apple.ssh-agent", platform_binary: true
   process signing_id: "com.apple.Terminal", platform_binary: true
   process signing_id: "com.apple.dt.Xcode", team_id: "59GAB85EFG"
   process signing_id: "dev.warp.Warp-Stable", team_id: "QKE527SSM6"
